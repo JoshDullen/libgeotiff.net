@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F5ED525-E2F1-4B7E-B96D-A3C4866A290B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Free.Ports.libgeotiff</RootNamespace>
+    <AssemblyName>Free.Ports.libgeotiff</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cpl\cpl_csv.cs" />
+    <Compile Include="cpl\cpl_serv.cs" />
+    <Compile Include="geokeys.cs" />
+    <Compile Include="geonames.cs" />
+    <Compile Include="geotiff.cs" />
+    <Compile Include="geotiff_proj4.cs" />
+    <Compile Include="geovalues.cs" />
+    <Compile Include="geo_extra.cs" />
+    <Compile Include="geo_free.cs" />
+    <Compile Include="geo_get.cs" />
+    <Compile Include="geo_keyp.cs" />
+    <Compile Include="geo_names.cs" />
+    <Compile Include="geo_new.cs" />
+    <Compile Include="geo_normalize.cs" />
+    <Compile Include="geo_print.cs" />
+    <Compile Include="geo_set.cs" />
+    <Compile Include="geo_tiffp.cs" />
+    <Compile Include="geo_trans.cs" />
+    <Compile Include="geo_write.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="xtiff.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Free.Ports.libjpeg\Free.Ports.libjpeg.csproj">
+      <Project>{7F4EE6B0-8246-408B-90EC-112359DFE8F8}</Project>
+      <Name>Free.Ports.libjpeg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Free.Ports.LibTiff\Free.Ports.LibTiff.csproj">
+      <Project>{180D4B8E-859B-4472-B739-18A2466B6012}</Project>
+      <Name>Free.Ports.LibTiff</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Free.Ports.Proj4\Free.Ports.Proj4.csproj">
+      <Project>{D0210A8D-3904-4A34-BBF4-4A49CA7C325E}</Project>
+      <Name>Free.Ports.Proj4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Free.Ports.zLib\Free.Ports.zLib.csproj">
+      <Project>{6072982F-C71D-4D0F-AD88-25E0CEEFADE5}</Project>
+      <Name>Free.Ports.zLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
